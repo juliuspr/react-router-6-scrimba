@@ -1,5 +1,5 @@
-import HeroImage from "./HeroImage";
-import Modal from "./Modal";
+import HeroImage from "../components/HeroImage";
+import Modal from "../components/Modal";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 

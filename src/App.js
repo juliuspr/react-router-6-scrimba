@@ -1,10 +1,10 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import About from "./About";
-import Home from "./Home";
-import Vans from "./Vans";
-import VanDetail from "./VanDetail";
-import Navbar from "./Navbar";
+import About from "./pages/About";
+import Home from "./pages/Home";
+import Vans from "./pages/Vans";
+import VanDetail from "./pages/VanDetail";
+import Navbar from "./components/Navbar";
 
 import "./styles.scss";
 

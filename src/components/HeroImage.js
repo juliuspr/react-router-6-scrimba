@@ -1,6 +1,6 @@
-import "./styles.scss";
+import "../styles.scss";
 
-import heroImg from "./assets/images/img1.png";
+import heroImg from "../assets/images/img1.png";
 
 export default function HeroImage() {
   return (
