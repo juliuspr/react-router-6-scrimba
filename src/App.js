@@ -4,7 +4,16 @@ import About from "./pages/About";
 import Home from "./pages/Home";
 import Vans from "./pages/Vans";
 import VanDetail from "./pages/VanDetail";
-import Navbar from "./components/Navbar";
+import Layout from "./components/Layout";
+import Dashboard from "./pages/Host/Dashboard";
+import Income from "./pages/Host/Income";
+import Reviews from "./pages/Host/Reviews";
+import HostLayout from "./components/HostLayout";
+import HostVans from "./pages/Host/HostVans";
+import HostVanDetail from "./pages/Host/HostVanDetail";
+import HostVanInfo from "./pages/Host/HostVanInfo";
+import HostVanPhotos from "./pages/Host/HostVanPhotos";
+import HostVanPricing from "./pages/Host/HostVanPricing";
 
 import "./styles.scss";
 
@@ -13,13 +22,26 @@ import "./server.js";
 export default function App() {
   return (
     <BrowserRouter>
-      <Navbar />
-
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/vans" element={<Vans />} />
-        <Route path="/vans/:id" element={<VanDetail />} />
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="vans" element={<Vans />} />
+          <Route path="vans/:id" element={<VanDetail />} />
+
+          <Route path="host" element={<HostLayout />}>
+            <Route index element={<Dashboard />} />
+            <Route path="vans" element={<HostVans />} />
+            <Route path="vans/:id" element={<HostVanDetail />}>
+              <Route index element={<HostVanInfo />} />
+              <Route path="pricing" element={<HostVanPricing />} />
+              <Route path="photos" element={<HostVanPhotos />} />
+            </Route>
+
+            <Route path="income" element={<Income />} />
+            <Route path="reviews" element={<Reviews />} />
+          </Route>
+        </Route>
       </Routes>
     </BrowserRouter>
   );

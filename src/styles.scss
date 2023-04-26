@@ -29,6 +29,13 @@ nav {
   a {
     color: darkslategray;
     padding: 8px;
+    text-decoration: none;
+  }
+  a.my-link {
+    text-decoration: underline;
+  }
+  a:hover {
+    text-decoration: underline;
   }
   .logo {
     flex-grow: 1;
@@ -38,6 +45,18 @@ nav {
     font-size: x-large;
     justify-self: start;
   }
+}
+
+footer {
+  background-color: #161616;
+  color: #AAAAAA;
+  height: 74px;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+  font-weight: 500;
 }
 
 .image-crop {
@@ -220,4 +239,61 @@ i[class*="van-type-"] {
   background-color: #ff8c38;
   color: white;
   font-size: 1.125rem;
+}
+.host-nav {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.host-nav a {
+  text-decoration: none;
+  color: #4D4D4D;
+  font-weight: 500;
+  padding: 5px 20px;
+  
+}
+
+.host-nav a:hover {
+  color: #161616;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+
+.host-van-link-wrapper {
+  color: unset;
+  text-decoration: unset;
+}
+
+.host-vans-list {
+  padding-inline: 26px;
+}
+
+.host-vans-title {
+  padding-inline: 26px;
+}
+
+.host-van-single {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  margin-bottom: 15px;
+  padding-block: 18px;
+  padding-left: 24px;
+}
+
+.host-van-single>img {
+  height: 70px;
+  border-radius: 5px;
+  margin-right: 17px;
+}
+
+.host-van-info h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-block: 10px;
+}
+
+.host-van-info p {
+  margin-block: 10px;
 }
